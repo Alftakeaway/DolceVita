@@ -20,28 +20,58 @@
             --border-radius: 8px;
             --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .navbar { background: rgba(255, 255, 255, 0.98) !important; backdrop-filter: blur(8px); border-bottom: 1px solid var(--secondary); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); }
+        .navbar {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
         .navbar-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: var(--primary) !important; letter-spacing: 1px; }
         .nav-link { color: var(--dark) !important; font-weight: 500; margin: 0 12px; transition: color 0.3s ease; }
         .nav-link:hover { color: var(--primary) !important; }
-        .hero { min-height: 100vh; background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://cdn.squaremeal.co.uk/restaurants/30171/images/637970157849855133_07052026013043.jpg?w=1200&h=800&fit=crop&auto=format%2Ccompress'); background-size: cover; background-position: center; opacity: 0.3; animation: subtle-zoom 20s ease-in-out infinite; }
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://cdn.squaremeal.co.uk/restaurants/30171/images/637970157849855133_07052026013043.jpg?w=1200&h=800&fit=crop&auto=format%2Ccompress');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            animation: subtle-zoom 20s ease-in-out infinite;
+        }
         @keyframes subtle-zoom { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         .hero-content { position: relative; z-index: 10; text-align: center; color: white; }
         .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 8vw, 5.5rem); font-weight: 700; letter-spacing: 2px; text-shadow: 2px 2px 15px rgba(0,0,0,0.5); }
         .hero-subtitle { font-size: 1.2rem; color: var(--secondary); margin-bottom: 2.5rem; font-style: italic; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+        
         .btn-primary-custom { display: inline-block; text-decoration: none; background: var(--primary); color: white; padding: 14px 38px; border: none; border-radius: var(--border-radius); font-weight: 600; cursor: pointer; transition: var(--transition); }
         .btn-secondary-custom { display: inline-block; text-decoration: none; background: transparent; color: white; padding: 14px 38px; border: 2px solid white; border-radius: var(--border-radius); font-weight: 600; cursor: pointer; margin-left: 1rem; transition: var(--transition); }
         .btn-primary-custom:hover { background: #6b0000; transform: translateY(-2px); color: white; }
         .btn-secondary-custom:hover { border-color: var(--secondary); color: var(--secondary); }
+        
         .section-padding { padding: 100px 0; }
         .container-custom { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; text-align: center; color: var(--primary); margin-bottom: 3rem; font-weight: 700; }
         .section-title::after { content: ''; display: block; width: 60px; height: 2px; background: var(--secondary); margin: 1rem auto 0; }
+        
         .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .about-text p { font-size: 1.05rem; line-height: 1.9; margin-bottom: 1.3rem; font-weight: 300; }
         .about-image { height: 450px; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
         .about-image img { width: 100%; height: 100%; object-fit: cover; }
+        
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
         .menu-card { background: white; border: 1px solid #e0d9ce; border-radius: var(--border-radius); padding: 2rem; transition: var(--transition); box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         .menu-card:hover { transform: translateY(-5px); border-color: var(--secondary); }
@@ -49,6 +79,7 @@
         .menu-card-price { color: var(--secondary); font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
         .menu-card-description { color: #666; font-size: 0.95rem; line-height: 1.6; }
         .menu-card-image { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-top: 1.5rem; }
+        
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .gallery-item { position: relative; width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: var(--border-radius); cursor: pointer; transition: var(--transition); }
         .gallery-image { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
@@ -56,16 +87,28 @@
         .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 2rem 1.5rem; opacity: 0; transition: 0.3s; }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
         .gallery-text { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; margin: 0; }
-        .reservation-section { background: white; border-radius: var(--border-radius); padding: 4rem 2rem; border: 1px solid var(--secondary); box-shadow: 0 10px 35px rgba(0,0,0,0.08); overflow: hidden; }
-        .iframe-container { position: relative; width: 100%; padding-top: 150%; /* Adjust height for the form */ overflow: hidden; }
-        .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        /* BOX PRENOTAZIONE ORIGINALE */
+        .reservation-box { 
+            max-width: 700px; 
+            margin: 0 auto; 
+            padding: 3.5rem 2rem; 
+            border: 1px solid #e0d9ce; 
+            border-radius: var(--border-radius); 
+            box-shadow: 0 10px 35px rgba(0,0,0,0.06); 
+            background: white; 
+            text-align: center;
+        }
+        .reservation-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 1.2rem; font-weight: 700; }
+        .reservation-box p { font-size: 1.05rem; margin-bottom: 2rem; color: #555; line-height: 1.7; }
+
         .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: center; }
         .contact-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
         footer { background: var(--dark); color: white; padding: 3rem 0; text-align: center; border-top: 2px solid var(--secondary); }
         .social-links { display: flex; justify-content: center; gap: 1.8rem; margin-bottom: 2rem; }
         .social-links a { color: var(--secondary); font-size: 1.4rem; transition: var(--transition); }
         .social-links a:hover { color: white; transform: translateY(-3px); }
-        @media (max-width: 768px) { .about-content { grid-template-columns: 1fr; } .hero-title { font-size: 3rem; } .iframe-container { padding-top: 250%; } }
+        @media (max-width: 768px) { .about-content { grid-template-columns: 1fr; } .hero-buttons { display: flex; flex-direction: column; gap: 10px; } .btn-secondary-custom { margin-left: 0; } .hero-title { font-size: 3rem; } }
     </style>
 </head>
 <body>
@@ -90,10 +133,11 @@
             <h1 class="hero-title">DOLCE VITA</h1>
             <p class="hero-subtitle">Authentic Italian dining in the heart of Wooburn Green</p>
             <div class="hero-buttons">
-                <a href="#reservation" class="btn-primary-custom">Book Now</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjK-hwMDBoQNIr92nkHziV2qp-UF5DaURpQcUbPx8pQcL_qA/viewform?usp=dialog&hl=en_GB" target="_blank" class="btn-primary-custom">Book Now</a>
                 <a href="#menu" class="btn-secondary-custom">View Menu</a>
             </div>
         </div>
+        <div class="scroll-indicator" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10; animation: bounce 2.5s infinite; color: var(--secondary); font-size: 1.8rem;"><i class="fas fa-chevron-down"></i></div>
     </section>
     <section class="section-padding" id="about">
         <div class="container-custom">
@@ -120,6 +164,9 @@
                 <div class="menu-card"><h3 class="menu-card-title">Tagliatelle Funghi</h3><div class="menu-card-price">£11.50</div><p class="menu-card-description">Porcini mushrooms, cream, and truffle. A rich and comforting flavour.</p><img src="https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2018/09/tagliatelle-funghifb.jpg" class="menu-card-image"></div>
                 <div class="menu-card"><h3 class="menu-card-title">Branzino al Forno</h3><div class="menu-card-price">£16.00</div><p class="menu-card-description">Whole sea bass, lemon, and aromatic herbs. Perfectly oven-baked.</p><img src="https://www.giallozafferano.it/images/222-22246/Branzino-al-forno_650x433_wm.jpg" class="menu-card-image"></div>
                 <div class="menu-card"><h3 class="menu-card-title">Vino della Casa</h3><div class="menu-card-price">£5.50</div><p class="menu-card-description">Selected Italian red wine. The perfect pairing for all our dishes.</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV4HNJFdbRbfSeCb8CYegeWzQJFq5w6O_4gg&s" class="menu-card-image"></div>
+                <div class="menu-card"><h3 class="menu-card-title">Tiramisù</h3><div class="menu-card-price">£6.00</div><p class="menu-card-description">Traditional recipe with mascarpone, espresso, and cocoa. Pure indulgence.</p><img src="https://static.tecnichenuove.it/cucinanaturale/2016/11/tiramisu.jpg" class="menu-card-image"></div>
+                <div class="menu-card"><h3 class="menu-card-title">Gelato Artigianale</h3><div class="menu-card-price">£4.50</div><p class="menu-card-description">Pistachio, hazelnut, or chocolate. Freshly prepared with love every day.</p><img src="https://media-assets.lacucinaitaliana.it/photos/65fc562f5c76073b5249175c/16:9/w_2560%2Cc_limit/1151706409" class="menu-card-image"></div>
+                <div class="menu-card"><h3 class="menu-card-title">Espresso & Caffè</h3><div class="menu-card-price">£2.00</div><p class="menu-card-description">Double espresso, lungo, or macchiato. The perfect way to finish your meal.</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHYibdx9GTuPs0rgkMXtC31etW8jjXALD9A&s" class="menu-card-image"></div>
             </div>
         </div>
     </section>
@@ -133,16 +180,19 @@
                 <div class="gallery-item"><img class="gallery-image" src="https://www.any-ways.com/wp-content/uploads/2019/05/antipasto-3484840_1280-2.jpg"><div class="gallery-overlay"><p class="gallery-text">Antipasto Italiano</p></div></div>
                 <div class="gallery-item"><img class="gallery-image" src="https://www.ilgiardinodagiovanni.it/wp-content/uploads/2019/04/Tagliatelle-fatte-in-casa_pasta-all-uovo-1024x683.png"><div class="gallery-overlay"><p class="gallery-text">Pasta Fresca</p></div></div>
                 <div class="gallery-item"><img class="gallery-image" src="https://naturalfoodservice.it/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-28-at-14.34.31-1024x682.jpeg"><div class="gallery-overlay"><p class="gallery-text">Fresh Ingredients</p></div></div>
+                <div class="gallery-item"><img class="gallery-image" src="https://www.ristorantepizzeriajanna.com/wp-content/uploads/2015/10/pizza-margherita_brescia_opt-600x368.jpg"><div class="gallery-overlay"><p class="gallery-text">Pizza Margherita</p></div></div>
+                <div class="gallery-item"><img class="gallery-image" src="https://images2.corriereobjects.it/methode_image/2023/11/14/Cucina/Foto%20Cucina%20-%20Trattate/IMG_5377-k73H-U3450414331727t0C-656x492@Corriere-Web-Sezioni.jpg?v=202401141041"><div class="gallery-overlay"><p class="gallery-text">Italian Wine</p></div></div>
+                <div class="gallery-item"><img class="gallery-image" src="https://italiasquisita.net/files/chunks/54c9f3cefb5ab971770060c3/photo-max_54c9f847fb5ab96dc2000696.jpg"><div class="gallery-overlay"><p class="gallery-text">Risotto Milanese</p></div></div>
             </div>
         </div>
     </section>
     <section class="section-padding" id="reservation">
         <div class="container-custom">
             <h2 class="section-title">Book Your Table</h2>
-            <div class="reservation-section" data-aos="zoom-in">
-                <div class="iframe-container">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjK-hwMDBoQNIr92nkHziV2qp-UF5DaURpQcUbPx8pQcL_qA/viewform?embedded=true&hl=en_GB">Loading…</iframe>
-                </div>
+            <div class="reservation-box" data-aos="zoom-in">
+                <h3>Online Bookings</h3>
+                <p>To secure your table at Dolce Vita, please fill out our digital booking request. It takes less than a minute and helps us prepare your perfect dining experience.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjK-hwMDBoQNIr92nkHziV2qp-UF5DaURpQcUbPx8pQcL_qA/viewform?usp=dialog&hl=en_GB" target="_blank" class="btn-primary-custom" style="padding: 16px 45px; font-size: 1.1rem;">Book a Table Online</a>
             </div>
         </div>
     </section>
@@ -164,6 +214,13 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true });</script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        window.addEventListener('scroll', () => {
+            const indicator = document.querySelector('.scroll-indicator');
+            if (indicator && window.scrollY > 100) indicator.style.opacity = '0';
+            else if (indicator) indicator.style.opacity = '1';
+        });
+    </script>
 </body>
 </html>
